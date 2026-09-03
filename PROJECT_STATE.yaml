@@ -1,5 +1,5 @@
 project: EduSite
-canonical_version: "1.0"
+canonical_version: "1.1"
 control_repo:
   full_name: iqbalhimel004/edusite-project-control
   status: active
@@ -15,7 +15,7 @@ last_verified_task: TASK-001
 last_verified_commit: 9ac1dcadfa6d27b7142cdd52d2e33b18a373063a
 completed_tasks:
   - TASK-001
-next_task: TASK-002
+next_task: null
 blocked_tasks: []
 code_repositories:
   frontend: null
@@ -32,4 +32,8 @@ agent_defaults:
   specialist_second_opinion: Hyperagent
   optional_autonomous_agent: Antigravity
 security_stage: prototype_pragmatic
-next_action: Review the Arena Fable Stage 1 output when it finishes; do not advance to Stage 2 until it is independently reviewed and canonical state is synchronized.
+plan_audit:
+  version: "1.1"
+  result: pass_with_improvements
+  review: reviews/plan-audit-v1.1.md
+next_action: Review the Arena Fable Stage 1 output when it finishes; capture any temporary external artifact durably when possible; do not advance to Stage 2 until TASK-002 is independently reviewed and canonical state is synchronized.
