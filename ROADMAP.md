@@ -32,6 +32,8 @@ Current priority.
 18. Independent visual critique + fixes
 19. Final regression, dependency/license review and handoff
 
+M1 frontend work must preserve strong SEO/server-rendering, low client-JavaScript overhead, good Core Web Vitals potential, production-safe frontend boundaries, and future Android/mobile API reuse.
+
 Important: externally generated code/artifacts must be durably captured before temporary tool/session access can expire. Capture does not imply verification or approval.
 
 This sequence is not sacred. Material changes require documented rationale/ADR; minor sequencing refinements may be updated directly in the roadmap.
@@ -41,7 +43,8 @@ This sequence is not sacred. Material changes require documented rationale/ADR; 
 - create demo school
 - map ready-made capabilities vs Bangladesh gaps
 - define CMS/content ownership and uploaded-media strategy
-- establish API contract/provider integration
+- establish documented API/data contracts reusable by web and future mobile clients
+- validate authentication/media patterns for future mobile compatibility
 - validate backup/export expectations for school-owned data
 
 ## M3 — Bangladesh School Core
@@ -50,12 +53,14 @@ This sequence is not sacred. Material changes require documented rationale/ADR; 
 - marks/GPA/report card/tabulation as required
 - teacher/student/guardian workflows
 - attendance and routine integration
+- keep shared business rules in backend/domain logic rather than web-only components
 
 ## M4 — Portal & Operations
 - student/guardian/teacher experiences as justified
 - SMS integration
 - fee/payment integrations when commercially justified
 - operational reports
+- define notification model so future push notifications can be added cleanly
 
 ## M5 — Production Pilot Readiness & Hardening
 Must occur before onboarding real schools at commercial scale.
@@ -64,6 +69,9 @@ Must occur before onboarding real schools at commercial scale.
 - tenant/site isolation audit
 - privacy controls
 - rate limiting and abuse protection where needed
+- SEO crawl/indexability validation on production-like deployment
+- Core Web Vitals/performance measurement on representative pages/devices
+- production security headers and frontend security review
 - backup and restore validation
 - release identification and rollback procedure
 - migration rollback/restore planning
@@ -82,3 +90,12 @@ Only after M5 exit criteria pass for the intended production environment.
 - dependency/license compliance review maintained
 - data export/ownership expectations documented
 - capacity planning based on measured usage
+
+## M7 — Android / Mobile Client
+Can begin after the backend/API/auth contracts are stable enough to avoid duplicating business logic.
+- evaluate whether a PWA provides useful immediate installability/offline value;
+- define Android app requirements and user roles;
+- select mobile framework by ADR (Expo/React Native is a likely candidate, not pre-decided);
+- reuse existing Frappe/API/auth/media contracts rather than rebuilding backend logic;
+- add push notifications, app-specific caching/offline behavior and deep linking as justified;
+- independently review mobile authentication/privacy/security before production release.
