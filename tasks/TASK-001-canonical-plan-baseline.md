@@ -21,3 +21,7 @@ Planning-level cross-check completed against the conversation requirements. Repo
 
 ## Result
 PASS — canonical control plane operational.
+
+## Merge record
+Verified bootstrap merged to `main` via PR #1.
+Merged commit: `9ac1dcadfa6d27b7142cdd52d2e33b18a373063a`.
