@@ -29,6 +29,7 @@ Default pattern:
 **one primary implementer + one independent reviewer only when justified.**
 
 Do not ask several agents to independently implement the same routine feature.
+Temporary credit/model availability is a resource advantage, not an architectural dependency; the project must remain maintainable if a particular service disappears.
 
 ## Reasoning-effort policy
 Use the closest supported equivalent:
@@ -45,6 +46,24 @@ Prompts must be compact, precise and bounded. Persistent context belongs in GitH
 
 Typical coding prompt:
 > Implement TASK-XXX. Read AGENTS.md and tasks/TASK-XXX.md. Work only on the specified branch/scope. Run the task's required checks. Report changed files, verification evidence and unresolved issues. Do not merge.
+
+## External-agent artifact capture
+When work is created in Arena, Hyperagent, Antigravity, Zed or another external environment that may be temporary:
+1. preserve/export the generated code or artifact to a durable Git branch/repository/artifact location as soon as practical;
+2. label it **UNVERIFIED / INTAKE** until review passes;
+3. do not treat capture as approval;
+4. only verified work may enter the stable branch.
+
+This rule prevents loss of valuable work while preserving the verification gate.
+
+## Verification evidence levels
+A reviewer must distinguish:
+- **code/diff inspected**;
+- **automated check executed** (typecheck/lint/build/tests);
+- **visual/browser behavior observed**;
+- **external-agent claim only / unverified**.
+
+Never upgrade a claim into a verified fact without evidence.
 
 ## Technical-lead autonomy
 The Technical Lead may independently:
