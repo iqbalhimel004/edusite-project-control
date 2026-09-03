@@ -14,7 +14,12 @@ Verified:
 - frontend/backend architectural direction captured;
 - current Arena/Fable state captured;
 - private canonical repository established at `iqbalhimel004/edusite-project-control`;
-- canonical bootstrap documents stored on `main`.
+- 29 expected bootstrap changes reviewed against `main`;
+- `PROJECT_STATE.yaml` machine-parsed successfully before merge;
+- canonical bootstrap merged through PR #1.
+
+Merge evidence:
+- verified bootstrap commit on `main`: `9ac1dcadfa6d27b7142cdd52d2e33b18a373063a`
 
 Limitations:
 - no product code has been created or verified yet;
