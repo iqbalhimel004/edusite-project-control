@@ -1,0 +1,35 @@
+project: EduSite
+canonical_version: "1.0"
+control_repo:
+  full_name: iqbalhimel004/edusite-project-control
+  status: active
+  visibility: private
+  default_branch: main
+old_repositories:
+  policy: do_not_touch_without_explicit_repo_specific_authorization
+current_milestone: M1_sellable_frontend_demo
+current_stage: arena_fable_stage_1_foundation
+active_task: TASK-002
+status: in_progress_external_arena
+last_verified_task: TASK-001
+last_verified_commit: null
+completed_tasks:
+  - TASK-001
+next_task: TASK-002
+blocked_tasks: []
+code_repositories:
+  frontend: null
+  backend_custom_app: null
+current_external_work:
+  platform: Arena AI Code Direct
+  model: Fable 5.1
+  task: frontend_foundation_and_design_system_preview
+  verification_status: not_yet_reviewed
+agent_defaults:
+  technical_lead: ChatGPT
+  primary_implementation: Codex
+  ui_frontend_specialist: Fable 5.1_when_available
+  specialist_second_opinion: Hyperagent
+  optional_autonomous_agent: Antigravity
+security_stage: prototype_pragmatic
+next_action: Review the Arena Fable Stage 1 output when it finishes; do not advance to Stage 2 until it is independently reviewed and canonical state is synchronized.
